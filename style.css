@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&display=swap");
+
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  height: 100dvh;
+  width: 100dvw;
+  margin: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(250, 175, 175, 0.6667) 0%,
+    rgba(255, 224, 224, 1) 100%
+  );
+}
+
+.main {
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url("./assets/bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.cormorant-garamond {
+  font-family: "Cormorant Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.agbalumo-regular {
+  font-family: "Agbalumo", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container {
+  width: 97.3125rem;
+  height: 52.25rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 32px 32px rgba(0, 0, 0, 0.16);
+  border-radius: 1rem;
+}
+.hero {
+  margin: 0;
+  max-width: 700px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero img {
+  margin-top: 0rem;
+  height: 900px;
+  width: 698px;
+}
+
+.content {
+  width: 857px;
+  height: 100%;
+  background: rgba(96, 85, 87, 1);
+  border-bottom-right-radius: 1rem;
+  border-top-right-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.content_divider {
+  width: 717px;
+  height: 14px;
+  background-color: white;
+  border-radius: 0.5rem;
+  margin-top: 4rem;
+}
+
+.header {
+  height: 195px;
+  width: 667px;
+}
+
+.header_title {
+  margin: 0;
+  margin-top: 5rem;
+  color: white;
+  font-size: 8.25rem;
+}
+
+.content_socialMedia {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.content_subtitle,
+.socialMediaLink_title {
+  color: white;
+  letter-spacing: 9%;
+  text-align: center;
+  font-size: 61px;
+  margin: 0;
+}
+.socialMediaLink {
+  display: flex;
+  flex-direction: column;
+  width: 120px;
+  height: 130px;
+  margin: 1.5rem;
+}
+
+.socialMediaLink_title {
+  font-size: 31px;
+}
+
+.heart-link {
+  display: inline-block;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.heart-link:hover {
+  transform: scale(1.1);
+}
+
+.love {
+  --size: 70px;
+  width: var(--size);
+  height: var(--size);
+  transform: rotate(45deg) translateX(40px);
+  background: rgba(255, 169, 169, 1);
+  position: relative;
+  transition: all 0.3s ease;
+  margin-right: 1rem;
+}
+
+.love:before,
+.love:after {
+  content: "";
+  height: var(--size);
+  width: var(--size);
+  border-radius: 50%;
+  background: rgba(255, 169, 169, 1);
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.love:before {
+  top: 0;
+  left: calc(-1 * var(--size) / 2);
+}
+
+.love:after {
+  top: calc(-1 * var(--size) / 2);
+  left: 0;
+}
+
+.icon {
+  position: absolute;
+  top: 80%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 20px;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.heart-link:hover .love {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
