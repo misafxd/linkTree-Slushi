@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Linktree</title>
+    <title>Slushichan - VTuber Linktree</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="apple-touch-icon"
@@ -24,26 +24,30 @@
     />
     <link rel="manifest" href="/site.webmanifest" />
   </head>
-  <body class="body">
-    <div class="main">
-      <div class="container">
+  <body class="page">
+    <main class="main">
+      <article class="container">
         <div class="hero">
-          <img src="./assets/digan.png" alt="slushichan imagen" />
+          <img
+            class="hero-image"
+            src="./assets/digan.png"
+            alt="Slushichan - VTuber"
+          />
         </div>
 
         <div class="content">
-          <div class="header">
-            <h1 class="agbalumo-regular header_title">Slushichan</h1>
-          </div>
+          <header class="header">
+            <h1 class="header__title">Slushichan</h1>
+          </header>
 
-          <span class="content_divider"></span>
+          <span class="content__divider"></span>
 
-          <h2 class="content_subtitle cormorant-garamond">VTuber</h2>
+          <h2 class="content__subtitle">VTuber</h2>
 
-          <div class="content_socialMedia"></div>
+          <nav class="social-links"></nav>
         </div>
-      </div>
-    </div>
+      </article>
+    </main>
     <script type="module" src="./main.js"></script>
   </body>
 </html>
