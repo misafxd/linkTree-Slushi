@@ -38,12 +38,6 @@
   --container-height: 52.25rem;
   --hero-max-width: 700px;
   --content-width: 857px;
-
-  /* Breakpoints */
-  --breakpoint-sm: 640px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 1024px;
-  --breakpoint-xl: 1280px;
 }
 
 .page {
@@ -69,22 +63,19 @@
   width: var(--container-width);
   height: var(--container-height);
   display: flex;
-  align-items: center;
   box-shadow: 0 0 32px 32px var(--color-shadow);
   border-radius: var(--border-radius-md);
 }
 
 .hero {
   position: relative;
-  height: 100%;
-  max-width: var(--hero-max-width);
+  width: 100%;
   overflow: hidden;
 }
 
 .hero-image {
   width: 100%;
-  height: 110%;
-  object-fit: cover;
+  object-fit: none;
   object-position: center;
 }
 
@@ -95,26 +86,27 @@
   border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: var(--space-md);
+  justify-content: center;
+  padding-inline: 5rem;
+  gap: 2.5rem;
 }
 
-.content__divider {
-  width: 45rem;
+.header__divider {
+  width: 100%;
   height: 0.875rem;
   background-color: var(--color-white);
   border-radius: var(--border-radius-sm);
-  margin-top: var(--space-xxl);
 }
 
 .header {
-  width: 41.5rem;
-  height: 12.125rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header__title {
   font-family: var(--font-primary);
-  margin-top: 5rem;
   font-size: 8.25rem;
   color: var(--color-white);
 }
@@ -122,37 +114,41 @@
 .social-links {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-md);
+  justify-items: center;
+  gap: 1rem;
 }
 
-.content__subtitle,
+.header__subtitle,
 .social-link__title {
   font-family: var(--font-secondary);
   color: var(--color-white);
   text-align: center;
 }
 
-.content__subtitle {
+.header__subtitle {
   font-size: 61px;
   letter-spacing: 9%;
+  font-weight: 400;
+  margin-top: 2rem;
 }
 
 .social-link {
   display: flex;
   flex-direction: column;
   width: 7.5rem;
-  height: 8.125rem;
-  margin: var(--space-lg);
+  height: 10.125rem;
 }
 
 .social-link__title {
   font-size: 31px;
+  font-weight: 400;
 }
 
 .heart-link {
   display: inline-block;
   position: relative;
   transition: transform 0.3s ease;
+  height: 100%;
 }
 
 .heart-link:hover {
@@ -160,7 +156,7 @@
 }
 
 .love {
-  --size: 70px;
+  --size: 4.375rem;
   width: var(--size);
   height: var(--size);
   transform: rotate(45deg) translateX(40px);
@@ -192,7 +188,7 @@
 
 .icon {
   position: absolute;
-  top: 80%;
+  top: 45%;
   left: 53%;
   transform: translate(-50%, -50%);
   z-index: 10;
@@ -201,4 +197,96 @@
 
 .heart-link:hover .love {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 640px) {
+  .main {
+    margin: var(--space-sm);
+  }
+
+  .container {
+    flex-direction: column;
+    margin: var(--space-md);
+    max-width: 360px;
+    height: 90vh;
+  }
+
+  .content,
+  .header,
+  .social-links {
+    width: 100%;
+  }
+
+  .header * {
+    margin: 0;
+    line-height: initial;
+  }
+
+  .header__title {
+    font-size: 3rem;
+  }
+
+  .header__divider {
+    height: 0.5rem;
+  }
+
+  .header__subtitle {
+    font-size: 1.5rem;
+  }
+
+  .content {
+    flex: 3;
+    padding-inline: 2.4rem;
+    gap: 2.5rem;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: var(--border-radius-md);
+  }
+
+  .hero {
+    min-height: 40%;
+    width: 100%;
+    flex: 2;
+  }
+
+  .hero-image {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    transform: scale(1.5) translateY(15%);
+  }
+
+  .love {
+    --size: 30px;
+    transform: translate(23px, 15px) rotate(45deg);
+  }
+
+  .social-links {
+    gap: 0;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .social-links:last-child {
+    grid-column: 2 / 3;
+  }
+
+  .social-link {
+    margin: 0;
+    width: 4.5rem;
+    height: 5.125rem;
+    justify-content: center;
+  }
+
+  .social-link__title {
+    font-size: 1rem;
+  }
+
+  .icon {
+    top: 45%;
+    left: 53%;
+  }
+
+  .icon img {
+    width: 25px;
+    height: 25px;
+  }
 }
