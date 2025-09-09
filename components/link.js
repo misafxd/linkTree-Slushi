@@ -30,7 +30,7 @@ class socialLink extends HTMLElement {
               <a href="${this.link}" class="heart-link" target="_blank">
                 <div class="love"></div>
                 <div class="icon">
-                  <img src="${this.src}" alt="${this.titulo}" width=55 height=55/>
+                  <img src="${this.src}" alt="${this.titulo}"/>
                 </div>
               </a>
             </div>`;
