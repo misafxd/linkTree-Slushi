@@ -27,10 +27,10 @@ class socialLink extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `<div class="social-link">
               <h3 class="social-link__title">${this.titulo}</h3>
-              <a href="${this.link}" class="heart-link" target="_blank">
+              <a href="${this.link}" class="heart-link" target="_blank" aria-label="Visita a slushichan en nuestro perfil de ${this.titulo}">
                 <div class="love"></div>
                 <div class="icon">
-                  <img src="${this.src}" alt="${this.titulo}"/>
+                  <img src="${this.src}" alt=""/>
                 </div>
               </a>
             </div>`;
