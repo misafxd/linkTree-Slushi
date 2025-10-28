@@ -31,7 +31,7 @@ export const links = [
   },
   {
     titulo: "Wishlist",
-    link: "https://www.amazon.com.mx/hz/wishlist/ls/D7DLQIXJR8JY?ref_=wl_share",
-    src: "./assets/icons/amazon.svg",
+    link: "https://throne.com/slushichan/collections/slushichan-whishlist",
+    src: "./assets/icons/throne.svg",
   },
 ];
