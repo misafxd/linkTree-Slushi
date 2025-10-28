@@ -15,7 +15,7 @@ El objetivo de esta página es centralizar todos los enlaces importantes de Slus
 
 ## 📸 Preview
 
-<img width="1490" height="905" alt="Captura de pantalla 2025-09-16 143934" src="https://github.com/user-attachments/assets/b1faeb05-b74c-420a-9790-244938097d3a" />
+<img width="1585" height="932" alt="preview" src="https://github.com/user-attachments/assets/3b2b8f9e-77ae-4ab1-b0c6-13a20f398c87" />
 
 
 ## 📎 Características
